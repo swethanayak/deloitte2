@@ -1,0 +1,33 @@
+<html>
+<head></head>
+<body>
+<script>
+function validateForm()
+{
+var elements=document.getElementsByName("Gender");
+var count=0;
+for(var i=0;i<elements.length;i++)
+{
+if(elements[i].checked){
+count++;}
+}
+if(count==0)
+{
+document.getElementById("errorGender").innerHTML="  Please select the gender!!";
+return false;
+}
+else
+{
+document.getElementById("errorGender").innerHTML="";
+return true;
+}
+}
+</script>
+<form onsubmit="return validateForm()">
+Name: <input type="text" name="Name" placeholder="Enter your name"/><br/><br/>
+Gender: <input type="radio" name="Gender" /> Male
+<input type="radio" name="Gender" /> Female <span id="errorGender"></span><br/><br/>
+<input type="submit" value="Submit"/>
+</form>
+</body>
+</html>

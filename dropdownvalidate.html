@@ -1,0 +1,38 @@
+<html>
+<head></head>
+<body>
+<script>
+function dropdownValidate()
+{
+var elements=document.getElementsByClassName("Places Visited");
+var count=0;
+for(var i=0;i<elements.length;i++)
+{
+if(elements[i].selected){
+count++;}
+}
+if(count==0)
+{
+document.getElementById("errorcheck").innerHTML="Please select the places visited!!";
+return false;
+}
+else
+{
+document.getElementById("errorcheck").innerHTML="";
+return true;
+}
+}
+</script>
+<form onsubmit="return dropdownValidate()">
+Name: <input type="text" name="Name" placeholder="Enter your name"/><br/><br/>
+Places Visited: 
+<select>
+<option value="">Please select</option> 
+<option class="Places Visited" value="Bangalore">Bangalore</option>
+<option class="Places Visited" value="Mysore">Mysore</option>
+<option class="Places Visited" value="Hyderabad">Hyderabad</option>
+</select> <span id="errorcheck"></span> <br/><br/> 
+<input type="submit" value="Submit"/>
+</form>
+</body>
+</html>

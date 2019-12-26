@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<script>
+function fullname()
+{
+var x=document.getElementById("id1").value;
+var y=document.getElementById("id2").value;
+document.getElementById("id3").value=x+" "+y;
+}
+
+function nameValidation()
+{
+var firstvalue=document.getElementById("id1").value;
+var namePattern="^[a-zA-Z]+$";
+if(!firstvalue.match(namePattern))
+	document.getElementById("errorName").innerHTML="Name should be in alphabets";
+else
+	document.getElementById("errorName").innerHTML="";
+}
+function nameValidation1()
+{
+var lastvalue=document.getElementById("id2").value;
+var namePattern="^[A-Za-z]+$";
+if(!lastvalue.match(namePattern))
+ document.getElementById("errorName1").innerHTML="Name should be in alphabets";
+else
+ document.getElementById("errorName1").innerHTML="";
+}
+</script>
+Firstname: <input id="id1" oninput="nameValidation()"/><span id="errorName"></span><br/><br/>
+Lastname: <input id="id2" oninput="nameValidation1()"/><span id="errorName1"></span><br/><br/>
+<input type="text" id="id3"/>
+<input type="button" value="Fullname" onclick="fullname()"/>
+
+</body>
+</html>

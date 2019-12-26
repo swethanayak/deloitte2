@@ -3,9 +3,14 @@
 <title> Deloitte New Hire Registry </title>
 </head>
 <body bgcolor = "pink" >
-<form>
-Name: <input type="text" name="Name" placeholder="Enter your name"/><br/><br/>
-Phone Number: <input type="text" name="Name" /><br/><br/>
+<form autocomplete="off">
+<center>
+<h1>Deloitte New Hire Registry</h1>
+Name: <input type="text" name="Name" placeholder="Enter your name" size=15 autofocus maxlength=10 pattern="[A-Z]{1}[a-zA-Z]+"/><br/><br/>
+Password: <input type="password" name="password" pattern="[A-Z]{1}[a-zA-Z0-9*&^%$#@!]{7,}" /><br/><br/>
+Email id: <input type="text" name="email" pattern="[A-Za-z0-9_.]+[@]{1}[a-zA-Z]+(.com|.co|.in)" /><br/><br/>
+Date of birth: <input type="date" name="Date" /><br/><br/>
+Phone Number: <input type="text" name="Name" required pattern="[6-9]{1}[0-9]{9}"/><br/><br/>
 Address: <textarea rows=10 cols=50> </textarea> <br/><br/>
 Gender: <input type="radio" name="Gender" /> Male
 <input type="radio" name="Gender" /> Female<br/><br/>
@@ -18,9 +23,11 @@ Places Visited:
 <option value="Bangalore">Bangalore</option>
 <option value="Mysore">Mysore</option>
 <option value="Hyderabad">Hyderabad</option>
-</select><br/><br/>
-Upload: <input type="file" value="Upload file" multiple><br/><br/>
+</select> color: <input type="color"/><br></br>
+Upload: <input type="file" value="Upload file" multiple>
+Time:<input type="time"/> <br/><br/>
 <input type="Submit" value="SUBMIT"> <input type="Reset" value="RESET"> 
+</center>
 </form>
 </body>
 </html>
