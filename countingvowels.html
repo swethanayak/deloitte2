@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Finding the vowels </title>
+<script>
+function vowelsCheck()
+{
+var str = document.getElementById("txtName").value.toLowerCase();
+var a=0;
+var e=0; 
+var i=0; 
+var o=0; 
+var u=0;
+for(var i=0;i<=str.length-1;i++){
+if(str[i]=="a"){a++;}
+else if(str[i]=="e") {e++;}
+else if(str[i]=="i") {i++;}
+else if(str[i]=="o") {o++;}
+else if(str[i]=="u") {u++;}
+}
+
+document.getElementById("output").innerHTML="No of A="+a+"\n"+"No of E="+e+"\nNo of I="+i+"\nNo of O="+o+"\nNo of U="+u;
+}
+</script>
+</head>
+<body>
+<form>
+Enter the String : <input type="text" name="Name" id="txtName"/><br/><br/>
+<input type="button" value="SUBMIT" onclick="vowelsCheck()"/>
+<p id="output"></p>
+</form>
+</body>
+</html>

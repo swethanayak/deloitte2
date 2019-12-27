@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+<script>
+
+$(document).ready(
+function()
+{
+$("p").css({"color":"green","background-color":"pink"});
+});
+$("#btn").click(
+function()
+{
+$("#swetha").text($("#textname").val());
+}
+);
+$("input").focus(
+function()
+{
+$(this).css("backgroundColor","blue");
+}
+);
+);
+
+</script>
+<p>Good morning</p>
+<input type="text" id="textname"/>
+<input type="text"/>
+<input type="button" value="Button" id="btn"/>
+<span id="swetha"></span>
+</body>
+</html>
